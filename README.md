@@ -4,18 +4,16 @@ This is a test harness to produce an HTML heading ID generator that is as functi
 
 # Usage
 
-1. <work on `slugifyLikeGitHub`>
-2. `make test`
-3. <work on `slugifyLikeGitHub`>
-4. ...
+    make test
 
 # Implementation
 
-The generator is tested by comparing its outputs with GitHub's for a large number of generated headings like so:
+The generator is tested by comparing its outputs with GitHub's for a large number of generated headings, like so:
 
 1. Generate `many-headings.md` using [headings.py](./headings.py)
-2. Create a GitHub Gist from `many-headings.md` and download it as rendered by GitHub into `many-headings.html`
-3. Generate test cases from `many-headings.html` using [make-tests.py](./make-tests.py), and put them into `tests.json`
+2. Create a GitHub Gist from `many-headings.md`
+3. Download the rendered Gist into `many-headings.html`
+3. Make `tests.json` from `many-headings.html` using [make-tests.py](./make-tests.py)
 4. Test `test.js` using the cases in `tests.json`
 
 # Caveats
