@@ -15,7 +15,7 @@ function slugifyLikeGitHub(originalText) {
     //      a better regex would have been /[^\d\s\w-_]/ug, but the 'u' flag
     //      (Unicode) is not supported in some browsers, and we support
     //      many languages that use Unicode characters
-    text = text.replace(/[\[\]\(\)\=\;\:\+\?\!\.\,\{\}\\\/\>\<\"\']/g, '');
+    text = text.replace(/[\t\[\]\(\)\=\;\:\+\?\!\.\,\{\}\\\/\>\<\"\']/g, '');
 
     // trim remaining whitespace
     text = text.trim();

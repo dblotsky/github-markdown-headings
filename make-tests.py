@@ -13,7 +13,7 @@ def main():
         if line.startswith('<h1>'):
 
             # extract the title and its fragment name
-            fragment_name, title = re.match(r'^.*href="#([^"]+)".*a>(.*)</h1>$', line).groups()
+            fragment_name, title = re.match(r'^.*href="#([^"]*)".*a>(.*)</h1>$', line).groups()
 
             # remove digit suffix from fragment name
             match = re.match(r'^(.*)(-\d+)$', fragment_name)
